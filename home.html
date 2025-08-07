@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/Group.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a2c1bb72d8.js" crossorigin="anonymous"></script>
+    <style>
+        .outfit-font {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="outfit-font">
+    <main class="flex justify-center">
+        <div class="">
+
+
+            <!-- mockup-phone-display -->
+
+            <div class=" text-black  bg-white ">
+                <!-- head -->
+                <div class="mt-12 flex flex-row justify-between mx-3">
+                    <div class="stats shadow flex flex-row items-center">
+                        <img class="w-16 h-12" src="assets/Group.png" alt="">
+                        <div class="stat">
+                            <div class="font-extrabold">$<span id="balance">50430</span></div>
+                            <div class="stat-desc">Available Balance</div>
+                        </div>
+                    </div>
+                    <!-- logout section -->
+                    <button class="w-20 flex flex-row items-center gap-2 font-semibold text-[#08080880]" id="logout">
+                        <p>logout</p><i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </div>
+
+                <!-- welcome section -->
+                <div class="my-8 mx-3">
+                    <h3 class="font-bold text-2xl my-4">🔥 Welcome to Payooo!</h3>
+                    <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cash Out charges
+                        are low, <br> and transactions are fast and secure!</p>
+                </div>
+
+                <!-- button section -->
+                <div class="grid grid-cols-3 gap-3 mx-3">
+                    <button
+                        class="py-5 px-3 flex flex-col  border-[1px] rounded-lg bg-slate-100 border-[#0808081A] gap-2 items-center text-[#080808B2] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600"
+                        id="add-money-buttons">
+                        <img src="assets/wallet1.png" alt="">
+                        <p>Add Money</p>
+                    </button>
+                    <button
+                        class="py-5 px-3 flex flex-col  border-[1px] rounded-lg bg-slate-100 border-[#0808081A] gap-2 items-center text-[#080808B2] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600"
+                        id="cash-out-button">
+                        <img src="assets/send1.png" alt="">
+                        <p>Cashout</p>
+                    </button>
+                    <button
+                        class="py-5 px-3 flex flex-col  border-[1px] rounded-lg bg-slate-100 border-[#0808081A] gap-2 items-center text-[#080808B2] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600"
+                        id="transferMoneyButton">
+                        <img src="assets/money1.png" alt="">
+                        <p>Transfer</p>
+                    </button>
+                    <button
+                        class="py-5 px-3 flex flex-col  border-[1px] rounded-lg bg-slate-100 border-[#0808081A] gap-2 items-center text-[#080808B2] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600"
+                        id="bonus-button">
+                        <img src="assets/bonus1.png" alt="">
+                        <p>Get Bonus</p>
+                    </button>
+                    <button
+                        class="py-5 px-3 flex flex-col  border-[1px] rounded-lg bg-slate-100 border-[#0808081A] gap-2 items-center text-[#080808B2] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600"
+                        id="bills-button">
+                        <img src="assets/purse1.png" alt="">
+                        <p>Pay bills</p>
+                    </button>
+                    <button
+                        class="py-5 px-3 flex flex-col  border-[1px] rounded-lg bg-slate-100 border-[#0808081A] gap-2 items-center text-[#080808B2] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600"
+                        id="transaction-button">
+                        <img src="assets/transaction1.png" alt="">
+                        <p>Transaction</p>
+                    </button>
+                </div>
+
+                <div class="divider mx-3"></div>
+
+                <!-- payment Details -->
+                <div class="mx-3" id="payment-details">
+                    <!-- payment list header -->
+                    <div class="flex flex-row justify-between">
+                        <p class="text-lg font-bold">Latest Payment</p>
+                        <p class="text[#08080880] text-[14px]">View All</p>
+                    </div>
+                    <!-- payments -->
+                    <div>
+                        <div class="flex justify-between items-center px-4 py-3">
+                            <div class="flex ">
+                                <img src="assets/wallet1.png" class="p-3" alt="">
+                                <div>
+                                    <h3 class="text-base text-[#080808B2] font-semibold py-1">Electricity Bill</h3>
+                                    <p class="text-xs font-[#080808B2]">Today 01:44 AM</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <div class="flex justify-between items-center px-4 py-3">
+                            <div class="flex ">
+                                <img src="assets/wallet1.png" class="p-3" alt="">
+                                <div>
+                                    <h3 class="text-base text-[#080808B2] font-semibold py-1">Bank Deposit</h3>
+                                    <p class="text-xs font-[#080808B2]">Today 01:44 AM</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </div>
+                        <div class="flex justify-between items-center px-4 py-3">
+                            <div class="flex ">
+                                <img src="assets/wallet1.png" class="p-3" alt="">
+                                <div>
+                                    <h3 class="text-base text-[#080808B2] font-semibold py-1">Mobile Recharge</h3>
+                                    <p class="text-xs font-[#080808B2]">Today 01:44 AM</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <div class="flex justify-between items-center px-4 py-3">
+                            <div class="flex ">
+                                <img src="assets/wallet1.png" class="p-3" alt="">
+                                <div>
+                                    <h3 class="text-base text-[#080808B2] font-semibold py-1">Gas bill</h3>
+                                    <p class="text-xs font-[#080808B2]">Today 01:44 AM</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- add money -->
+                <div class="mx-3 hidden" id="add-money">
+                    <h3 class="text-lg font-semibold text-[#080808E5]">Add Money </h3>
+                    <form action="" class="flex flex-col rounded-2xl p-8">
+                        <label for="Bank" class="text-base font-semibold text-gray-600 my-3">Select A Bank</label>
+                        <select name="Bank" id=""
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70">
+                            <option value="ucb">United Commercial Bank PLC</option>
+                            <option value="ibbl">Islami Bank Bangladesh Limited</option>
+                            <option value="dbbl">Dutch Bangla Bank Limited</option>
+                        </select>
+
+                        <label for="accNumber" class="text-base font-semibold text-gray-600 my-3">Bank Account
+                            Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="" required autocomplete="on" placeholder="your bank account number">
+
+                        <label for="amount" class="text-base font-semibold text-gray-600 my-3">Amount to Add</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="input-ammount" required autocomplete="on" placeholder="Add amount to withdraw">
+
+                        <label for="pin" class="text-base font-semibold text-gray-600 my-3">Pin Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="pinNumber" required autocomplete="on" placeholder="Enter 4 digit pin number">
+                        <button type="submit"
+                            class="px-5 py-4 text-xl font-semibold bg-[#0874F2] text-white rounded-[32px] my-4 active:bg-blue-700"
+                            id="add-request">Add Money</button>
+                    </form>
+                </div>
+
+                <!-- Cash out -->
+                <div class="mx-3 hidden" id="cash-out">
+                    <h3 class="text-lg font-semibold text-[#080808E5]">Cash Out </h3>
+                    <form action="" class="flex flex-col rounded-2xl p-8">
+
+                        <label for="agNumber" class="text-base font-semibold text-gray-600 my-3">Agent Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="" required autocomplete="on" placeholder="Enter 11 digit number">
+
+                        <label for="amount" class="text-base font-semibold text-gray-600 my-3">Amount</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="withdraw-ammount" required autocomplete="on"
+                            placeholder="Add amount to withdraw">
+
+                        <label for="pin" class="text-base font-semibold text-gray-600 my-3" id="withdaw-pin">Pin
+                            Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="withdraw-pin" required autocomplete="on" placeholder="Enter 4 digit pin number">
+                        <button type="submit"
+                            class="px-5 py-4 text-xl font-semibold bg-[#0874F2] text-white rounded-[32px] my-4 active:bg-blue-700"
+                            id="withdraw-request">Withdraw Money</button>
+                    </form>
+                </div>
+
+                <!-- Transfer -->
+                <div class="mx-3 hidden" id="transfer-money">
+                    <h3 class="text-lg font-semibold text-[#080808E5]">Transfer Money </h3>
+                    <form action="" class="flex flex-col rounded-2xl p-8">
+
+                        <label for="userNumber" class="text-base font-semibold text-gray-600 my-3">User Account
+                            Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="" required autocomplete="on" placeholder="Enter 11 digit number">
+
+                        <label for="amount" class="text-base font-semibold text-gray-600 my-3">Amount</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="send-request" required autocomplete="on" placeholder="Add amount to withdraw">
+
+                        <label for="pin" class="text-base font-semibold text-gray-600 my-3">Pin Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="sendPin" required autocomplete="on" placeholder="Enter 4 digit pin number">
+                        <button type="submit"
+                            class="px-5 py-4 text-xl font-semibold bg-[#0874F2] text-white rounded-[32px] my-4 active:bg-blue-700"
+                            id="sendMoney">Send Money</button>
+                    </form>
+                </div>
+
+                <!-- Bonus -->
+                <div class="mx-3 hidden" id="bonus">
+                    <h3 class="text-lg font-semibold text-[#080808E5]">Get Bonus </h3>
+                    <form action="" class="flex flex-col rounded-2xl p-8">
+
+
+
+                        <label for="pin" class="text-base font-semibold text-gray-600 my-3">Enter Bonus Coupon</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="coupon-value" required autocomplete="on" placeholder="Enter your coupon">
+                        <button type="submit"
+                            class="px-5 py-4 text-xl font-semibold bg-[#0874F2] text-white rounded-[32px] my-4 active:bg-blue-700"
+                            id="bonus-money">Get
+                            Bonus</button>
+                    </form>
+                </div>
+
+                <!-- pay bills -->
+                <div class="mx-3 hidden" id="pay-bills">
+                    <h3 class="text-lg font-semibold text-[#080808E5]">Bill Pay</h3>
+                    <form action="" class="flex flex-col rounded-2xl p-8">
+                        <label for="Bank" class="text-base font-semibold text-gray-600 my-3">Select A Bank</label>
+                        <select name="Bank" id=""
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70">
+                            <option value="ucb">United Commercial Bank PLC</option>
+                            <option value="ibbl">Islami Bank Bangladesh Limited</option>
+                            <option value="dbbl">Dutch Bangla Bank Limited</option>
+                        </select>
+
+                        <label for="accNumber" class="text-base font-semibold text-gray-600 my-3">Biller Account
+                            Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="" required autocomplete="on" placeholder="your bank account number">
+
+                        <label for="amount" class="text-base font-semibold text-gray-600 my-3">Amount to Pay</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="bill-ammount" required autocomplete="on" placeholder="Add amount to withdraw">
+
+                        <label for="pin" class="text-base font-semibold text-gray-600 my-3">Pin Number</label>
+                        <input type="text"
+                            class="py-4 px-5 border-none bg-neutral-200 rounded-[32px] text-base font-light opacity-70"
+                            name="" id="pin-bill" required autocomplete="on" placeholder="Enter 4 digit pin number">
+                        <button type="submit"
+                            class="px-5 py-4 text-xl font-semibold bg-[#0874F2] text-white rounded-[32px] my-4 active:bg-blue-700"
+                            id="pay-request">Pay Now</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/add-money.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>
