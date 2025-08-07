@@ -1,3 +1,3 @@
  document.getElementById("logout").addEventListener("click",function(){
-    window.location.href = "../practice/index.html";
+    window.location.href = "/../index.html";
  })

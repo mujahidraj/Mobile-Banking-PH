@@ -16,15 +16,14 @@ document.getElementById("submit-button").addEventListener("click",function(event
     }
     else{
         if(!errorExist){
-            
-                const newPara = document.createElement("p");
-                newPara.id= "error";
-        newPara.innerText = "Wrong phone number or password! \n Please enter the correct 11 digit phone number and 4 digit pin number.";
-        newPara.style.color = "red";
-        newPara.style.fontSize = "16px";
-        newPara.style.textAlign = "center";
-        newPara.style.paddingTop = "20px";
-        document.getElementById("fieldset-id").appendChild(newPara);
+            const newPara = document.createElement("p");
+            newPara.id= "error";
+            newPara.innerText = "Wrong phone number or password! \n Please enter the correct 11 digit phone number and 4 digit pin number.";
+            newPara.style.color = "red";
+            newPara.style.fontSize = "16px";
+            newPara.style.textAlign = "center";
+            newPara.style.paddingTop = "20px";
+            document.getElementById("fieldset-id").appendChild(newPara);
         }
         else{
              existingError.innerText = "Wrong phone number or password! \n Please enter the correct 11 digit phone number and 4 digit pin number.";
